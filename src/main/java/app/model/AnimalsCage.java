@@ -8,10 +8,6 @@ public class AnimalsCage {
 
     private final Animal animal;
 
-    public Timer getTimer() {
-        return timer;
-    }
-
     private final Timer timer;
 
     public AnimalsCage(@Qualifier("dog") Animal animal, @Qualifier("timer") Timer timer) {
@@ -25,5 +21,9 @@ public class AnimalsCage {
         System.out.println("At:");
         System.out.println(timer.getTime());
         System.out.println("________________________");
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 }
